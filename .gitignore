@@ -1,0 +1,25 @@
+# Simulink cache files
+*.slxc
+
+# Simulink project cache directory
+slprj/
+
+# MATLAB autosave files
+*.asv
+
+# MATLAB generated code directories
+codegen/
+sccprj/
+
+# HDL Coder generated output
+hdl_prj/
+hdlsrc/
+
+# Simulink Data Dictionary lock files
+*.sldd.lock
+
+# MEX binaries
+*.mexa64
+*.mexmaci64
+*.mexmaca64
+*.mexw64
