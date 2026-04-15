@@ -4,16 +4,23 @@ Simulink-based FM radio receiver designed for HDL code generation using MATLAB/S
 
 ## Overview
 
-This project implements an FM radio receiver as a Simulink model, progressively refined across multiple versions for HDL-readiness. The workflow demonstrates how to take a floating-point Simulink model through fixed-point conversion and optimization toward FPGA/ASIC deployment.
+This project implements an FM radio receiver as a Simulink model, progressively refined across multiple versions for HDL-readiness. The workflow demonstrates how to take a floating-point Simulink model through hardware-efficient restructuring, fixed-point conversion, and hardware input integration toward FPGA/ASIC deployment.
+
+### Model Versions
+
+1. **v1** - Simulink block: Baseline FM receiver model using standard Simulink blocks.
+2. **v3** - Hardware-efficient block: Restructured model using hardware-efficient architectures suitable for HDL code generation.
+3. **v4** - Fixed-point with .wav: Fixed-point converted model using `.wav` file as the audio input source.
+4. **v5** - Fixed-point with RTL-SDR: Fixed-point model configured for real-time RF input via RTL-SDR hardware.
 
 ## Project Structure
 
 | File | Description |
 |------|-------------|
-| `fm_radio_simulink_v1.slx` | Initial FM radio receiver Simulink model (baseline/reference) |
-| `fm_radio_simulink_v3.slx` | Refined model iteration |
-| `fm_radio_simulink_v4.slx` | Further optimized model iteration |
-| `fm_radio_simulink_v5.slx` | Final HDL-ready model iteration |
+| `fm_radio_simulink_v1.slx` | Baseline FM receiver using standard Simulink blocks |
+| `fm_radio_simulink_v3.slx` | Hardware-efficient block architecture |
+| `fm_radio_simulink_v4.slx` | Fixed-point model with `.wav` file input |
+| `fm_radio_simulink_v5.slx` | Fixed-point model with RTL-SDR hardware input |
 | `fm_radio_test_bench_v1.mlx` | MATLAB Live Script test bench for v1 |
 | `fm_radio_test_bench_v3.mlx` | MATLAB Live Script test bench for v3 |
 | `fm_radio_test_bench_v4.mlx` | MATLAB Live Script test bench for v4 |
