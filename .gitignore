@@ -23,3 +23,6 @@ hdlsrc/
 *.mexmaci64
 *.mexmaca64
 *.mexw64
+
+# Vivado Project files
+vivado_prj/
