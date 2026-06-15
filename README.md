@@ -1,8 +1,8 @@
-# HDL Coder Evaluation Reference Guide 예제 자료
+# SDR로 배우는 실전 무선공학 - MATLAB에서 FPGA까지
 
 ![Book cover](image/book_cover.jpg)
 
-이 레포지토리는 **HDL Coder Evaluation Reference Guide** 책에서 다루는 MATLAB, Simulink, HDL Coder, SDR, PYNQ 데모 예제 자료를 장별로 정리한 공간입니다. 각 장의 스크립트, Simulink 모델, 오디오 입력 파일, 데모 노트북과 FPGA 실행 파일을 책의 흐름에 맞춰 보관합니다.
+이 레포지토리는 **SDR로 배우는 실전 무선공학 - MATLAB에서 FPGA까지** 책에서 다루는 MATLAB, Simulink, HDL Coder, SDR, PYNQ 데모 예제 자료를 장별로 정리한 공간입니다. 각 장의 스크립트, Simulink 모델, 오디오 입력 파일, 데모 노트북과 FPGA 실행 파일을 책의 흐름에 맞춰 보관합니다.
 
 책의 일부 내용은 [샘플 페이지 PDF](docs/sample_page.pdf)에서 확인할 수 있습니다.
 
@@ -44,12 +44,6 @@
 - PYNQ 데모 실행 시 PYNQ 보드와 Jupyter Notebook 환경
 
 사용하는 장과 예제에 따라 필요한 툴박스와 하드웨어가 달라질 수 있습니다.
-
-## Git 관리 기준
-
-예제 원본(`*.m`, `*.slx`, `*.mlx`, `*.wav`, `*.ipynb`)과 책 소개 자료(`image/`, `docs/`), 데모 실행에 필요한 `Chapter_5/Demo/hardware/` 파일은 추적 대상입니다.
-
-MATLAB/Simulink 캐시(`*.slxc`, `slprj/`), HDL Coder 생성 결과(`hdl_prj/`, `hdlsrc/`), Vivado 프로젝트 출력(`vivado_prj/`, `.Xil/`, `*.jou`, `*.log`)은 재생성 가능한 산출물이므로 `.gitignore`에서 제외합니다.
 
 ## 라이선스
 
