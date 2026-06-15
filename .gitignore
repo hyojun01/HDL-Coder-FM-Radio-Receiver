@@ -1,26 +1,25 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+*~
+
+# MATLAB autosave and temporary files
+*.asv
+*.m~
+
 # Simulink cache files
 *.slxc
-matlab/*.slxc
 
-# Simulink project cache directory
+# Simulink and MATLAB generated directories
 slprj/
-matlab/slprj
-
-# MATLAB autosave files
-*.asv
-matlab/*.asv
-
-# MATLAB generated code directories
-codegen/
 sccprj/
-matlab/codegen/
-matlab/sccprj/
+codegen/
+*_ert_rtw/
+*_grt_rtw/
 
 # HDL Coder generated output
 hdl_prj/
 hdlsrc/
-matlab/hdl_prj
-matlab/hdlsrc
 
 # Simulink Data Dictionary lock files
 *.sldd.lock
@@ -31,5 +30,26 @@ matlab/hdlsrc
 *.mexmaca64
 *.mexw64
 
-# Vivado Project files
+# Vivado/Xilinx generated project files
 vivado_prj/
+.Xil/
+*.jou
+*.log
+*.str
+
+# Python and Jupyter generated files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Book assets and runnable demo payloads are intentionally tracked.
+!docs/
+!docs/**/*.pdf
+!image/
+!image/**/*.jpg
+!image/**/*.jpeg
+!image/**/*.png
+!Chapter_5/Demo/hardware/
+!Chapter_5/Demo/hardware/demo.bit
+!Chapter_5/Demo/hardware/demo.hwh
+!Chapter_5/Demo/hardware/demo.tcl

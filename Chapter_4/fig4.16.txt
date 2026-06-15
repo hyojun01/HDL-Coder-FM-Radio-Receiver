@@ -1,0 +1,31 @@
+subplot(211)
+x = horzcat(simin.Data(:,1,1), simin.Data(:,1,2), simin.Data(:,1,3), simin.Data(:,1,4), simin.Data(:,1,5), simin.Data(:,1,6), simin.Data(:,1,7), simin.Data(:,1,8), simin.Data(:,1,9), simin.Data(:,1,10), simin.Data(:,1,11), simin.Data(:,1,12), simin.Data(:,1,13), simin.Data(:,1,14), simin.Data(:,1,15), simin.Data(:,1,16), simin.Data(:,1,17), simin.Data(:,1,18), simin.Data(:,1,19), simin.Data(:,1,20));
+x = x(:);	
+plot(real(x))
+xlabel('Samples');		ylabel('Input Signal');	
+axis([0, 20000, -1.2, 1.2]);
+
+subplot(212)
+y = horzcat(simout.Data(:,1,1), simout.Data(:,1,2), simout.Data(:,1,3), simout.Data(:,1,4), simout.Data(:,1,5), simout.Data(:,1,6), simout.Data(:,1,7), simout.Data(:,1,8), simout.Data(:,1,9), simout.Data(:,1,10), simout.Data(:,1,11), simout.Data(:,1,12), simout.Data(:,1,13), simout.Data(:,1,14), simout.Data(:,1,15), simout.Data(:,1,16), simout.Data(:,1,17), simout.Data(:,1,18), simout.Data(:,1,19), simout.Data(:,1,20));
+y = y(:);
+plot(real(y))
+xlabel('Samples');		ylabel('Output Signal');	
+%axis([0, 20000, -1.2, 1.2]);
+axis([0, 20000, -1.2e-3, 1.2e-3]);
+
+
+subplot(121) 
+Nfft=20480;
+X=(1/Nfft)*fftshift(fft(x,Nfft));
+f=((-Nfft/2):(Nfft/2)-1)/Nfft*fs;
+plot(f/1000, log(abs(X)));
+xlabel('Frequency [kHz]'); ylabel('Amplitude');
+axis([-100, 100, -30, 0]);
+subplot(122) 
+Nfft=20480;
+Y=(1/Nfft)*fftshift(fft(y,Nfft));
+f=((-Nfft/2):(Nfft/2)-1)/Nfft*fs;
+plot(f/1000, log(abs(Y)));
+xlabel('Frequency [kHz]'); ylabel('Amplitude');
+axis([-100, 100, -30, 0]);
+
